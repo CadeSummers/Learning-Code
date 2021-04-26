@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+
+    <table class="center">
+        <tr>
+            <th font-weight="bold">Name</th>
+            <th font-weight="bold">Price</th>
+            <th font-weight="bold">Symbol</tb>
+        </tr>
+        <tr>
+            <td>  {{ stock["name"] }}  </td>
+            <td>  {{ stock["price"] }}  </td>
+            <td>  {{ stock["symbol"] }}  </td>
+        </tr>
+    </table>
+
+{% endblock %}
