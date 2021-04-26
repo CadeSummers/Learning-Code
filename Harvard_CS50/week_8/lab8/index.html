@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+        
+            function check_button(value)
+            {
+                if (value === "C")
+                {
+                    alert("Correct!");
+                    document.querySelector("#C").style.backgroundColor = "Green";
+                }
+                else
+                {
+                    
+                    if (value === "A")
+                    {
+                        document.querySelector("#A").style.backgroundColor = "Red";
+                    }
+                    else if (value === "B")
+                    {
+                        document.querySelector("#B").style.backgroundColor = "Red";
+                    }
+                    else if (value === "D")
+                    {
+                        document.querySelector("#D").style.backgroundColor = "Red";
+                    }
+                }
+            }
+        
+            function check_response()
+            {
+                
+                let answer = document.querySelector("#Response").value;
+                
+                answer = String(answer)
+                
+                if (answer === ("Cybersecurity" || "cybersecurity" || "Computer Forensics" || "computer forensics"))
+                {
+                    document.querySelector("#Response").style.backgroundColor = "Green";
+                    document.querySelector("#Response").value = "Correct!";
+                }
+                else
+                {
+                    document.querySelector("#Response").style.backgroundColor = "Red";
+                    document.querySelector("#Response").value = "Incorrect";
+                }
+            }
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                
+                <h3>Which of the following people below has NOT taught CS50?</h3>
+                
+                <hr>
+                
+                <button id ="A" value = "A" onclick = "check_button(value);">
+                    A. Mark Zuckerberg (CEO of Facebook)
+                </button>
+                
+                <button id="B" value = "B" onclick = "check_button(value);">
+                    B. Brian Kernighan (Computer Science Legend)
+                </button>
+                
+                <button id="C" value = "C" onclick = "check_button(value);">
+                    C. Bjarne Stroustrup (Creator of C++)
+                </button>
+                
+                <button id="D"  value = "D" onclick = "check_button(value);">
+                    D. Steve Ballmer (Former CEO of MicroSoft)
+                </button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                
+                <h3>What field of Computer Science did David J. Malan do research in for his PhD?</h3>
+                
+                <form onsubmit="check_response(); return false;">
+                    <input type = "text" id="Response" value = "">
+                    <input type = "submit" value = "Check Answer">
+                </form>
+
+            </div>
+
+        </div>
+    </body>
+</html>

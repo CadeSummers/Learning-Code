@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+        <title>
+            Counter
+        </title>
+        <script>
+            //HTML File used to illustrate JavaScript
+            let counter = 0;
+            
+            function count()
+            {
+                counter++;
+                document.querySelector('#result').innerHTML = counter;
+            }
+        </script>
+    </head>
+    <body>
+        This is a counting program.
+        <form onsubmit = "count(); return false;">
+            <input type = "submit">
+        </form>
+        <div id = "result">
+            0
+        </div>
+    </body>
+</html>

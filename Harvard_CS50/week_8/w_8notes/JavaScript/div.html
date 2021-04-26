@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+        <title>
+            Hello
+        </title>
+        <script>
+            //HTML File used to illustrate JavaScript
+            function hello()
+            {
+                let name = document.querySelector("#name").value;
+                
+                //If no name, set name equivalent to "World"
+                if (name === '')
+                {
+                    name = "World";
+                }
+                document.querySelector("#result").innerHTML = "Hello, " + name + "!";   
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="hello(); return false;">
+            <input type = "text" id = "name">
+            <input type = "submit">
+        </form>
+        <div id = "result">
+            Hello!
+        </div>
+    </body>
+</html>
